@@ -11,7 +11,6 @@ Two views:
      budget-aware ranking, without needing an LLM call.
 """
 
-import json
 import os
 
 import pandas as pd
@@ -38,7 +37,7 @@ elif provider == "Google":
     api_key = st.sidebar.text_input(
         "Google API key", type="password", value=os.environ.get("GOOGLE_API_KEY", "")
     )
-    model_name = st.sidebar.text_input("Model", value="gemini-3.5-flash")
+    model_name = st.sidebar.text_input("Model", value="gemini-1.5-flash")
 elif provider == "OpenAI":
     api_key = st.sidebar.text_input(
         "OpenAI API key", type="password", value=os.environ.get("OPENAI_API_KEY", "")
